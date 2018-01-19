@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TubeConvert - MP4, WEBM, M4A</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet prefetch' href="{% static 'convertvideo/convert/css/yxqdlj.css'">
+<link rel="stylesheet" href="{% static 'convertvideo/convert/css/style.css' %}">
+</head>
+<body>
+  <div class="title-container">
+  <h1 class="title">Ingresa la URL de tu video favorito de YoTube.</h1>
+  <h2 class="title-down">Descarga Videos y Audios de Youtube con un Click.</h2>
+</div>
+<form action="/v/">
+<fieldset class="field-container">
+  <input type="url" placeholder="URL del Video..." class="field" name="url" required />
+  <div class="icons-container">
+    <div class="icon-search"></div>
+    <div class="icon-close">
+      <div class="x-up"></div>
+      <div class="x-down"></div>
+    </div>
+  </div>
+</fieldset>
+</form>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script  src="{% static 'convertvideo/convert/js/index.js' %}"></script>
+</body>
+</html>

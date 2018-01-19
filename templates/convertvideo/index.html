@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta title="TubeConvert - MP4, M4A, 3GP, entre otros">
+  <title>TubeConvert - MP4, WEBM, M4A</title>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="{% static 'convertvideo/css/style.css' %}">
+</head>
+<body>
+<div class="mm-launch-container container" align="center">
+  <div class="col-sm-offset-3 col-sm-6">
+    <h2>TubeConvert</h2>
+    <p>Esta aplicación web te permite descargar videos de YouTube en distinto formatos (MP4, M4A, 3GP, entre otros), todo de una manera muy facil. Simplemente nesecitaras la URL del video y escoger el formato en el cual quieres descargar, y listo, no dudaras más de 5 minutos.</p>
+  <a href="convert/"><button class="mm-launch">Comenzar</button></a>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script  src="{% static 'convertvideo/js/index.js' %}"></script>
+</body>
+</html>

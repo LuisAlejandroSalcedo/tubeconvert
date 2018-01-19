@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{video.title}}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'convertvideo/v/style.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+
+<div class="mdl-layout__container"><div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-upgraded is-small-screen" data-upgraded=",MaterialLayout">
+      <main class="mdl-layout__content mdl-color--grey-100" style="margin-left:0px">
+        <div class="mdl-grid demo-content">
+          <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+            <center>
+            <h2 class="mdl-card__title-text"><!-- Titulo del Video -->{{video.title}}</h2>
+          </center>
+          <br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{video.videoid}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <br>
+          	<!-- Información y Descripción -->
+          	<div>
+<div class="mdl-tabs mdl-js-tabs">
+  <div class="mdl-tabs__tab-bar">
+    <a href="#tab1" class="mdl-tabs__tab is-active">Opciones de Descargas</a>
+    <a href="#tab2" class="mdl-tabs__tab">Descripción</a>
+  </div>
+  <div class="mdl-tabs__panel is-active" id="tab1">
+  	<br>
+    
+<table class="mdl-data-table mdl-js-data-table">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Tipo de Archivo</th>
+      <th>Formato</th>
+      <th>Descargar</th>
+      <th>Archivo</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for streams in video.allstreams %}
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">{{streams.mediatype}}</td>
+      <td>{{streams.extension}}</td>
+      <td><a href="{{streams.url}}" download="acme-doc-2.0.1.mp4"><i class="material-icons">file_download</i></a></td>
+      <td>{{streams}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+    
+    
+  </div>
+  <div class="mdl-tabs__panel" id="tab2">
+  	<br>
+    <p>{{video.description}}</p>
+  </div>
+</div>
+</div>
+           </div>
+        
+        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+            <div class="demo-separator mdl-cell--1-col"></div>
+            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand">
+                <h4>
+                	¿Quieres probar con otro video?
+                </h4>
+              </div>
+            <div class="mdl-card__actions mdl-card--border" style="height:50px">
+              <a href="/convert/" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:white" data-upgraded=",MaterialButton,MaterialRipple">
+             Volver atrás
+              <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+            </div>
+            </div>
+        </div>
+          </div>
+        </main></div></div>
+
+</body>
+</html>

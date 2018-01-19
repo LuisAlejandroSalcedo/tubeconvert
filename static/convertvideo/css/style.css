@@ -1,0 +1,89 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+
+* {
+  font-family: 'Open Sans';
+}
+
+.mm-product-video-modal-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  overflow: scroll;
+}
+
+.mm-product-video-modal-container.open {
+  display: block;
+}
+
+.mm-product-video-modal-close:hover {
+  cursor: pointer;
+}
+
+.mm-product-video-modal-close {
+  color: #fff;
+  position: fixed;
+  z-index: 1000000000;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+}
+
+.mm-product-video-modal {
+  width: 60%;
+  max-height: 800px;
+  overflow: scroll;
+  position: relative;
+  top: -1000px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.mm-product-video-modal.open {
+  top: 150px;
+  margin-bottom: 150px;
+}
+
+.mm-video-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.mm-launch-container {
+  margin-top: 100px;
+}
+
+.mm-launch {
+  background: #04b68f;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 300;
+}
+
+.mm-launch-container p {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.mm-launch-container h2 {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.dropper {
+    transition: top 0.5s ease-in-out;
+}
